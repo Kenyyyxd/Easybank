@@ -30,8 +30,7 @@
 }
 
 /* mobile */
-
-header{
+#header{
     z-index: 10;
     background-color: var(--White);
     position: absolute;
@@ -39,6 +38,7 @@ header{
     z-index: 50;
     position: fixed;
     box-shadow: 0px 0px 100px hsl(233, 26%, 24%);
+    transition: top 0.3s ease-in-out;
 }
 nav{
     justify-content: space-between;
@@ -89,7 +89,7 @@ nav{
 .btn{
     display: none;
 }
-header{
+#header{
     padding: 30px 30px;
 }
 #intro{
@@ -291,7 +291,7 @@ footer p{
 
 
 @media only screen and (min-width: 760px){
-    header{
+    #header{
         display: flex;
         height: 80px;
     }
