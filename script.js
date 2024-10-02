@@ -13,3 +13,29 @@ mobileMenu.addEventListener('click', () => {
         closeIcon.style.display = 'none';
     }
 })
+
+let lastScrollTop = 0;
+const header = document.getElementById('header');
+let isScrolling;
+
+window.addEventListener('scroll', function() {
+    clearTimeout(isScrolling);
+
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+
+        header.style.top = '-100px';
+    } else {
+
+        header.style.top = '0';
+    }
+
+    lastScrollTop = scrollTop;
+
+    isScrolling = setTimeout(() => {
+        if (window.pageYOffset > lastScrollTop) {
+            header.style.top = '-100px';
+        }
+    }, 100);
+});
